@@ -376,13 +376,19 @@ load(&quot;C:/Users/aross4/Desktop/R Folder/obiwanaddone/data/StarWars.RData&quo
 #StarWars
 #View(StarWars[1:10,1:14])
 
-add_one &lt;- function (Starwars, height) {
-  taller &lt;- height + 1
-  return(taller)
+add_one &lt;- function (dataset, x) {
+  t &lt;- x + 1
+  return(t)
 }
-
-taller &lt;-c(StarWars$height + 1)
-StarWars$taller &lt;-StarWars[,2]+1
+add_one(StarWars,StarWars$height)</code></pre>
+<pre><code>##  [1] 173 168  97 203 151 179 166  98 184 183 189 181 229 181 174 176 171 181  67
+## [20] 171 184 201 191 178 176 181 151  NA  89 161 194 192 171 197 225 207 184 138
+## [39] 113 184 164 176 181 179  95 123 164 189 199 197 172 185 189 265 189 197 186
+## [58] 158 184 184 171 167 166 194 192 184 169 199 230 214 168  80  97 194 192 179
+## [77] 217 235 189 179 207  NA  NA  NA  NA  NA 166</code></pre>
+<pre class="r"><code>#taller &lt;-c(StarWars$height + 1)
+#StarWars$taller &lt;-StarWars[,2]+1
+StarWars$taller &lt;-add_one(StarWars,StarWars$height)
 
 StarWars$height</code></pre>
 <pre><code>##  [1] 172 167  96 202 150 178 165  97 183 182 188 180 228 180 173 175 170 180  66
