@@ -4,17 +4,19 @@
 \title{Add One to a Number
 %%  ~~function to do ... ~~
 }
-\description{Using the copy of the starwars tibble that is in the dplyr package,
-use the dataframe StarWars for the function in this package,
-use add_one to the column height with a new column taller
+\description{The function in this package, allows to 
+use add the number 1 to a column - the example used with the included dataset 'StarWars' the height column may be increased to "make" characters taller.
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-add_one(x)
+add_one(dataset, dataset$x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
+  \item{x}{ The original column/number}
+  \item{t}{The new column to be created that adds 1 to each row of column x}
+  \item{dataset}{The dataset to be acted upon}
+  }
 %%     ~~Describe \code{x} here~~
 }
 }
@@ -31,7 +33,7 @@ add_one(x)
 \references{
 %% ~put references to the literature/web site here ~
 }
-\author{
+\author{Alex Ross
 %%  ~~who you are~~
 }
 \note{
@@ -49,12 +51,12 @@ add_one(x)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-add_one <- function (Starwars, height) {
-  taller <- height + 1
-  return(taller)
+add_one <- function (dataset, x) {
+  t <- h + 1
+  return(t)
 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ ~obiwanaddone }% use one of  RShowDoc("KEYWORDS")
+\keyword{ ~add_one }% __ONLY ONE__ keyword per line
